@@ -1,0 +1,35 @@
+Speech is one of the natural ways for humans to express their emotions. Moreover
+speech is easier to obtain and process in real time scenarios, which is why most applications that depend on emotion recognition work with speech. A typical SER system
+works on extracting features such as spectral features, pitch frequency features, formant
+features and energy related features from speech, following it with a classification task
+to predict various classes of emotion [4] [5]. Bayesian Network model [6] [7], Hidden
+Markov Model (HMM) [8], Support Vector Machines (SVM) [9], Gaussian Mixture
+Model (GMM) [10] and Multi-Classifier Fusion [11] are few of the techniques used in
+traditional classification tasks.
+Since the last decade, Deep Learning techniques have contributed significant breakthroughs in natural language understanding (NLU). Deep Belief Networks (DBN) for
+SER, proposed by Kim et al. [12] and Zheng et al. [13], showed a significant improvement over baseline models [5] [11] that do not employ deep learning, which suggests
+that high-order non-linear relationships are better equipped for emotion recognition.
+Han et al. [14] proposed a DNN-Extreme Learning Machine (ELM), which uses utterance-level features from segment-level probability distributions along with a single hidden layer neural net to identify utterance level emotions, although improvement in accuracies were limited. Fayek et al. [15] made use of deep hierarchical architectures,
+data augmentation and regularization with a DNN for SER, whereas Zheng et al. [16]
+used Spectrograms with Deep CNNs. Vladimir et al. [17] trained DNNs on a sequence
+of acoustic features calculated over small speech intervals along with a probabilisticnatured CTC loss function, which allowed the consideration of long utterances containing both emotional and unemotional parts and improved recognition accuracies. Lee et
+al. [4] used a bi-directional LSTM model to train the feature sequences and achieved
+an emotion recognition accuracy of 62.8% on the IEMOCAP [18] dataset, which is a
+significant improvement over DNN-ELM [14]. Satt et al. [19] used deep CNNs in combination with LSTMs to achieve better results on the IEMOCAP dataset.
+In recent years researchers have been looking into the use of multimodal features for
+emotion recognition. Tzirakis et al. [20] proposed an SER system that uses auditory
+and visual modalities to capture emotional content from various styles of speaking. Zadeh et al. [21] proposed a Tensor Fusion Network, which learns intra-modality and
+inter-modality dynamics end-to-end, ideal for the volatile nature of language online.
+Ranganathan et al. [22] experimented with Convolutional Deep Belief Networks
+(CDBN), which learn salient multimodal features of expressions, to achieve good accuracies.
+In this work, we propose a robust technique of emotion classification using speech
+features and transcriptions. The objective is to capture emotional characteristics using
+speech features, along with semantic information from text, and use a deep learning 
+3
+based emotion classifier to improve emotion detection accuracies. We present different
+deep network architectures to classify emotion using speech features and text. The main
+contributions of the current work are:
+- Proposed a CNN model for emotion classification using Speech features
+(MFCC, Spectrogram)
+- Proposed a CNN model for emotion classification using both speech features
+(MFCC, Spectrogram) and transcriptions
